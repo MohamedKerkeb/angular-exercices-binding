@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Exercices Binding Angular</h1>
+
+  <h4>Test du Two Way Data Binding (banana in the box) 🍌📦</h4>
+
+  <input type="text" placeholder="Saisie ton prénom" [(ngModel)]="yourName" />
+  <p *ngIf="yourName">Bienvenue {{ yourName }}</p>
+
+  <h2>Mini App</h2>
+
+  <app-search-bar (searchInput)="onSearch($event, radioApp)"></app-search-bar>
+  <app-filter-selector
+    (radioInput)="onSearch(searchApp, $event)"
+  ></app-filter-selector>
+  <app-data-table [dataUser]="data"></app-data-table>
+</div>
